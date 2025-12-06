@@ -59,3 +59,23 @@ Update the IP address in the scripts (`host = '192.168.0.100';` etc.) to match y
 git clone https://github.com/darshan-k-s/UR5e_WritingTasks.git
 cd UR5e_WritingTasks
 ```
+
+2. Open the folder in MATLAB and add it to the path:
+```bash
+addpath(genpath(pwd));
+```
+
+3. In MATLAB, open finalWriter.m and adjust (if needed):
+   - Robot IP and port.
+   - Writing heights (zWrite, zLift).
+   - Scale, spacing, and motion parameters (a, v, r).
+
+4. Run finalWriter.m:
+   - When prompted, enter either a text string (up to 10 chars, 0-9 / a-z), or a simple expression like `12+3=` or `8*4=`.
+   - Specify x/y/yaw offsets to place the writing in the workspace.
+   - The script will:
+      - Compute a handwriting-style trajectory.
+      - Send the Cartesian waypoints to the UR5e via RTDE.
+      - Plot the executed TCP path for visual verification.
+
+This repository can be used as a starting point for any UR5e “writing” or drawing applications that need font-based trajectory generation and simple 2D layout control.
