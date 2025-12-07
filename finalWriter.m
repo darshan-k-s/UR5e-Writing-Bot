@@ -1,6 +1,5 @@
 % UR5e ASCII writing
 % Author: Darshan K S
-% For MTRN4230 2025
 
 function traj = makeTrajFromStr(str, hershey, scale, spacing, zWrite, zLift, pointsperStroke)
 % Create a trajectory for given ASCII string
